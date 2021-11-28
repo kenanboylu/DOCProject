@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "9f4467a9-e7fa-4e52-9bf5-0ea1f8304c1b",
+		"name": "Docman Rest API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List All Documents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/docman/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docman",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Document By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/docman/find?id=13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docman",
+						"find"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Document",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/kenan/Downloads/KenanBoylu_CV_en.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/docman/save?name=Document13&type=pdf",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docman",
+						"save"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Document13"
+						},
+						{
+							"key": "type",
+							"value": "pdf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Document",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/kenan/Downloads/unnamed..jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/docman/update?id=14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docman",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Document By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/docman/remove?id=13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docman",
+						"remove"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Document Content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/docman/getContent?id=14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docman",
+						"getContent"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
